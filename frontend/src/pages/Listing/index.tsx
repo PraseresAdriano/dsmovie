@@ -33,11 +33,14 @@ function Listing() {
     //foi necessário remover o <React. StrictMode> em outro index.tsx (buscar com crtl + shift + F)
     //para executar apenas uma vez
 
+    const handlePageChance = (newPagenumber : number) => {
+        setPageNumber(newPagenumber);
+    }
 
     return (
 
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handlePageChance}/>
 
             <div className="container">
                 <div className="row">
